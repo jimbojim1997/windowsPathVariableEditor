@@ -28,10 +28,17 @@ Partial Class window
         Me.btnModify = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnMvUp = New System.Windows.Forms.Button()
+        Me.btnMvDown = New System.Windows.Forms.Button()
+        Me.btnBrowse = New System.Windows.Forms.Button()
+        Me.btnOptions = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lbVariables
         '
+        Me.lbVariables.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbVariables.FormattingEnabled = True
         Me.lbVariables.Location = New System.Drawing.Point(2, 2)
         Me.lbVariables.Name = "lbVariables"
@@ -78,17 +85,66 @@ Partial Class window
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
+        'btnMvUp
+        '
+        Me.btnMvUp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMvUp.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnMvUp.Location = New System.Drawing.Point(331, 147)
+        Me.btnMvUp.Name = "btnMvUp"
+        Me.btnMvUp.Size = New System.Drawing.Size(75, 23)
+        Me.btnMvUp.TabIndex = 5
+        Me.btnMvUp.Text = "Move Up"
+        Me.btnMvUp.UseVisualStyleBackColor = True
+        '
+        'btnMvDown
+        '
+        Me.btnMvDown.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMvDown.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnMvDown.Location = New System.Drawing.Point(331, 176)
+        Me.btnMvDown.Name = "btnMvDown"
+        Me.btnMvDown.Size = New System.Drawing.Size(75, 23)
+        Me.btnMvDown.TabIndex = 6
+        Me.btnMvDown.Text = "Move Down"
+        Me.btnMvDown.UseVisualStyleBackColor = True
+        '
+        'btnBrowse
+        '
+        Me.btnBrowse.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBrowse.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnBrowse.Location = New System.Drawing.Point(331, 234)
+        Me.btnBrowse.Name = "btnBrowse"
+        Me.btnBrowse.Size = New System.Drawing.Size(75, 23)
+        Me.btnBrowse.TabIndex = 8
+        Me.btnBrowse.Text = "Browse"
+        Me.btnBrowse.UseVisualStyleBackColor = True
+        '
+        'btnOptions
+        '
+        Me.btnOptions.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnOptions.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnOptions.Location = New System.Drawing.Point(331, 263)
+        Me.btnOptions.Name = "btnOptions"
+        Me.btnOptions.Size = New System.Drawing.Size(75, 23)
+        Me.btnOptions.TabIndex = 9
+        Me.btnOptions.Text = "Options"
+        Me.btnOptions.UseVisualStyleBackColor = True
+        '
         'window
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(407, 463)
+        Me.Controls.Add(Me.btnOptions)
+        Me.Controls.Add(Me.btnBrowse)
+        Me.Controls.Add(Me.btnMvDown)
+        Me.Controls.Add(Me.btnMvUp)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnModify)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lbVariables)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(423, 501)
         Me.Name = "window"
         Me.Text = "Variable Editor"
         Me.ResumeLayout(False)
@@ -100,4 +156,8 @@ Partial Class window
     Friend WithEvents btnModify As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnSave As Button
+    Friend WithEvents btnMvUp As Button
+    Friend WithEvents btnMvDown As Button
+    Friend WithEvents btnBrowse As Button
+    Friend WithEvents btnOptions As Button
 End Class
